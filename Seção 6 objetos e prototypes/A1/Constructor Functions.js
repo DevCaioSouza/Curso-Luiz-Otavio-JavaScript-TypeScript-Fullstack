@@ -5,7 +5,7 @@ function Pessoa(nome, sobrenome){
   this.nome = nome;
   this.sobrenome = sobrenome;
 
-  Object.freeze(this)
+  Object.freeze(this) //trava o objeto
   //
 }
 
