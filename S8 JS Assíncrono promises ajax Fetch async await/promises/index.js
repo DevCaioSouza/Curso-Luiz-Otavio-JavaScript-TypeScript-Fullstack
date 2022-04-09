@@ -2,26 +2,35 @@ function rand(min, max) {
   min *= 1000;
   max *= 1000;
   return Math.floor(Math.random() * (max - min) + min);
-  //                    resultado  *  2000   +   1000
 }
 
 function esperaAi(msg, tempo) {
   return new Promise((resolve, reject) => {
+    if(typeof msg !== 'string') reject(false)
+
     setTimeout(() => {
       resolve(msg);
     }, tempo);
   });
 }
 
-esperaAi("Frase 1", rand(1, 3))
-  .then((resposta) => {
-    console.log(resposta);
-    return esperaAi("Frase 2", rand(1, 3));
+esperaAi('Conexão com a BD', rand(1, 3))
+  .then(resposta => {
+    console.log(resposta)
+    return esperaAi('Buscando dados...', rand(1, 3))
   })
-  .then((resposta) => {
-    return resposta + " vai pro outro THEN";
+  .then(resposta => {
+    console.log(resposta)
+    return esperaAi(22222, rand(1, 3));
   })
-  .then((resposta) => {
-    console.log(resposta);
+  .then(resposta => {
+    console.log(resposta)
+  }).then(() =>{
+    console.log('Exibição dos dados na tela')
   })
-  .catch();
+  .catch(e => {
+    console.log('ERRO:', e)
+  });
+
+
+  console.log('Isso aqui será exibido antes da Promise')
