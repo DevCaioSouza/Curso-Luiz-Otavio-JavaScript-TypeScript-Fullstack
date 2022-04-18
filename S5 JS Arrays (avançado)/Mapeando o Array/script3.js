@@ -21,14 +21,33 @@ const nomeString = pessoas.map((obj) => {
 
 // (2)
 
-const idades = pessoas.map((obj) => {
-  delete obj.nome;
-  return obj;
-});
+// const idades = pessoas.map((obj) => {
+//   delete obj.nome;
+//   return obj;
+// });
 
 const idadesSegundoMetodo = pessoas.map((obj) => {
   return { idade: obj.idade };
 });
 
 const idadesArrowFunction = pessoas.map(obj => ({ idade: obj.idade }));
-console.log(idadesArrowFunction)
+
+
+// (3)
+const adicionaId = pessoas.map((obj, indice) => {
+  obj.id = indice 
+  return obj
+})
+console.log(adicionaId)
+
+/*
+OBS: Ao longo das funções os objetos originais vão sendo alterados
+É possível criar um novo objeto com as mesmas características 
+e usá-lo ao invés do original
+Solução: 
+const adicionaId = pessoas.map((obj, indice) => {
+  const newObj = {...obj};
+  return obj
+})
+  
+*/
