@@ -6,3 +6,6 @@ console.log(numerosEmDobro);
 
 //o MAP vai ter sempre o tamanho do array original
 //diferente do Filter que podemos encurtar
+  
+
+
