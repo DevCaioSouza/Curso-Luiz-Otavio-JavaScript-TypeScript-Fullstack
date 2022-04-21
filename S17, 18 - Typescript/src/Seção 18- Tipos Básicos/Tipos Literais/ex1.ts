@@ -11,7 +11,7 @@ const pessoa = {
 function escolhaCor(cor: 'Vermelho' | 'Amarelo' | 'Azul') {
   return cor;
 }
-console.log(escolhaCor(''));
+console.log(escolhaCor('Vermelho'));
 
 // Module mode
 export default 1;
