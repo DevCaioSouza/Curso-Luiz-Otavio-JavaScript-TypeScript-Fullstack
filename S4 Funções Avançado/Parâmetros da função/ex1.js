@@ -9,4 +9,7 @@ function funcao(a, b, c) {
 
 
 
-funcao(1, 2, 3, 4, 5, 6);
+funcao(1, 2, 3, 4, 5);
+
+//argumentos são os valores q vc envia na chamada da função
+//o método arguments não funciona em Arrow Functions
