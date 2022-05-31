@@ -23,10 +23,11 @@ function Produto(nome, preco, estoque){
       configurable: true 
     }
   })
-
-
 }
 
+// A única diferença de defineProperty() e defineProperties()
+// é que a primeira serve para um único elemento do objeto
+// e a segunda pra todos os elementos do objeto
 
 // p1.estoque = 50000;
 // delete p1.estoque;//writable true não anula o delete

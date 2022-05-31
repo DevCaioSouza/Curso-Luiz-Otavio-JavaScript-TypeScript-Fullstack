@@ -7,6 +7,7 @@ function Produto(nome, preco, estoque){
     value: estoque,
     writable: true, //Se false: o valor de estoque ñ pode ser alterado
     configurable: true //Se false, o código repetido abaixo não tem ação 
+    //O configurable determina se a propriedade pode ser apagada
   })
   
 
@@ -22,3 +23,4 @@ console.log(Object.keys(p1))
 for(let chave in p1){
   console.log(chave)
 }
+
