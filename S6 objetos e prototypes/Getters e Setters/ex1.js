@@ -6,6 +6,7 @@ function Produto(nome, preco, estoque) {
   Object.defineProperty(this, "estoque", {
     enumerable: true, //mostra a chave
     configurable: true, //configurável
+    //o get está substituindo o "value"
     get: function () {
       return estoquePrivado;
     },
