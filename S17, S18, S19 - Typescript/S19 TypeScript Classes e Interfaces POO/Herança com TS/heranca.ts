@@ -22,3 +22,12 @@ export class Pessoa {
     return this.nome + '' + this.sobrenome;
   }
 }
+
+export class Aluno extends Pessoa {}
+export class Cliente extends Pessoa {}
+
+const pessoa = new Pessoa('Alcindo', 'Oliveira', 30, '294.256.255.82');
+const aluno = new Aluno('Alcindo', 'Oliveira', 30, '294.256.255.82');
+const cliente = new Cliente('Alcindo', 'Oliveira', 30, '294.256.255.82');
+
+console.log(pessoa, aluno, cliente);
