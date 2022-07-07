@@ -1,6 +1,6 @@
 export class Empresa {
   readonly nome: string;
-  readonly colaboradores: Colaborador[] = [];
+  colaboradores: Colaborador[] = [];
   public readonly cnpj: string;
 
   constructor(nome: string, cnpj: string) {
@@ -38,9 +38,15 @@ empresa1.adicionaColaborador({
   nome: 'Leonardo',
   sobrenome: 'Vieira',
 });
+
+//colaboradores em modo public possibilitam isso:
 empresa1.colaboradores.pop();
 empresa1.colaboradores.pop();
 empresa1.colaboradores.pop();
+
+//readonly removido do colaborador, agora podemos alterar tipo
+empresa1.colaboradores = [];
+
 console.log(empresa1);
 
 //Classes são praticamente moldes p/ criar objetos
