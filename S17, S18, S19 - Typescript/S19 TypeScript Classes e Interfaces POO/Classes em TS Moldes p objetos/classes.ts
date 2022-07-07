@@ -11,6 +11,12 @@ export class Empresa {
   adicionaColaborador(colaborador: Colaborador): void {
     this.colaboradores.push(colaborador);
   }
+
+  mostrarColaboradores(): void {
+    for (const colaborador of this.colaboradores) {
+      console.log(colaborador);
+    }
+  }
 }
 
 export class Colaborador {
@@ -20,10 +26,19 @@ export class Colaborador {
   ) {}
 }
 
-const empresa1 = new Empresa('Udemy', 'nd-2079');
+const empresa1 = new Empresa('Padoca do Zé', 'CNPJ: 12.528.409/0001-24');
 const colaborador1 = new Colaborador('Andre', 'Meira');
 const colaborador2 = new Colaborador('José', 'Alves');
 const colaborador3 = new Colaborador('Djony', 'Almeida');
+
+empresa1.adicionaColaborador(colaborador1);
+empresa1.adicionaColaborador(colaborador2);
+empresa1.adicionaColaborador(colaborador3);
+empresa1.adicionaColaborador({
+  nome: 'Leonardo',
+  sobrenome: 'Vieira',
+});
+
 console.log(empresa1);
 
 //Classes são praticamente moldes p/ criar objetos
