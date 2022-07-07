@@ -1,6 +1,6 @@
 export class Empresa {
   readonly nome: string;
-  colaboradores: Colaborador[] = [];
+  private readonly colaboradores: Colaborador[] = [];
   public readonly cnpj: string;
 
   constructor(nome: string, cnpj: string) {
@@ -40,12 +40,12 @@ empresa1.adicionaColaborador({
 });
 
 //colaboradores em modo public possibilitam isso:
-empresa1.colaboradores.pop();
-empresa1.colaboradores.pop();
-empresa1.colaboradores.pop();
+// empresa1.colaboradores.pop();
+// empresa1.colaboradores.pop();
+// empresa1.colaboradores.pop();
 
 //readonly removido do colaborador, agora podemos alterar tipo
-empresa1.colaboradores = [];
+// empresa1.colaboradores = [];
 
 console.log(empresa1);
 
