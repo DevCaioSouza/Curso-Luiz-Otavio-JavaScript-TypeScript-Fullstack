@@ -43,17 +43,21 @@ export class Aluno extends Pessoa {
     return result + ' Heyyyy';
   }
 }
+//Repare acima que o super não é referenciado explicitamente na super classe
+//Isso quer dizer que o TS já sabe o que significa "super"
+
 export class Cliente extends Pessoa {
   getNomeCompleto(): string {
     return 'Dados do cliente: ' + this.nome + ' ' + this.sobrenome;
   }
 }
 
-const pessoa = new Pessoa('Alcindo', 'Oliveira', 30, '294.256.255.82');
-const aluno = new Aluno('Alcindo', 'Oliveira', 30, '294.256.255.82', '0001');
+const pessoa = new Pessoa('Nome', 'Sobrenome', 0, 'CPF');
+const aluno = new Aluno('Uirá', 'Medrado', 27, '286.457.128.17', '0001');
 const cliente = new Cliente('Alcindo', 'Oliveira', 30, '294.256.255.82');
 
 console.log(pessoa.getNomeCompleto());
+console.log(aluno.getCpf());
 console.log(aluno.getNomeCompleto());
 console.log(cliente.getNomeCompleto());
 console.log(aluno);
