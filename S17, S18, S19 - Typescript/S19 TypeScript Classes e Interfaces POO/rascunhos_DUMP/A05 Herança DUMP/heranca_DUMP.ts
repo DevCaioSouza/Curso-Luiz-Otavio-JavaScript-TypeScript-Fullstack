@@ -24,19 +24,24 @@ export class Carros {
   }
 
   descricaoCompleta(): string {
-    return 'Carro modelo ' + this.modelo + ' de cor' + this.cor + ' fabricado em ' + this.ano;
+    return 'Carro modelo: ' + this.modelo + ' de cor ' + this.cor + ' fabricado em ' + this.ano;
   }
 }
 
 export class Populares extends Carros {
   descricaoCompleta(): string {
-    return 'Dados do veículo: ' + 'Carro modelo ' + this.modelo + ' de cor ' + this.cor + ' modelo ' + this.ano;
+    console.log('Resultado da pesquisa em CARROS POPULARES');
+    return super.descricaoCompleta();
+    // return 'Dados do veículo: ' + 'Carro modelo ' + this.modelo + ' de cor ' + this.cor + ' modelo ' + this.ano;
   }
 }
 
 export class Esportivos extends Carros {
   descricaoCompleta(): string {
-    return 'Dados do veículo: ' + 'Carro modelo ' + this.modelo + ' de cor ' + this.cor + ' fabricado em ' + this.ano
+    console.log('Resultado da pesquisa em CARROS ESPORTIVOS')
+    const result = super.descricaoCompleta()
+    return result
+    // return 'Dados do veículo: ' + 'Carro modelo ' + this.modelo + ' de cor ' + this.cor + ' fabricado em ' + this.ano
   }
 }
 
