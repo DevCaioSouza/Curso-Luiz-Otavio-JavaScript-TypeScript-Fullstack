@@ -29,6 +29,19 @@ export class Carros {
 }
 
 export class Populares extends Carros {
+  disponivel: string
+
+  constructor(
+    modelo: string,
+    ano: number,
+    cor: string,
+    placa: string,
+    disponivel: string,
+  ) {
+    super(modelo, ano, cor, placa)
+    this.disponivel = disponivel
+  }
+
   descricaoCompleta(): string {
     console.log('Resultado da pesquisa em CARROS POPULARES');
     return super.descricaoCompleta();
@@ -45,10 +58,11 @@ export class Esportivos extends Carros {
   }
 }
 
-const corsa = new Populares('Corsa', 2008, 'Preto', 'ZIK-4920');
-const palio = new Populares('Palio', 2005, 'Prata', 'UHW-2901');
+const corsa = new Populares('Corsa', 2008, 'Preto', 'ZIK-4920', 'Sim');
+const palio = new Populares('Palio', 2005, 'Prata', 'UHW-2901', 'Não');
 const bmw = new Esportivos('BMW-X6', 2014, 'Branca', 'HSN-0182')
 
 console.log(corsa.descricaoCompleta());
 console.log(palio.descricaoCompleta());
 console.log(bmw.descricaoCompleta())
+console.log(corsa)
