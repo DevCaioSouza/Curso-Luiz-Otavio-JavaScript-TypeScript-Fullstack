@@ -15,12 +15,16 @@ export class Cerveja {
   public readonly tipo: string;
   public readonly ibu: number;
 
+  private readonly revendedores: Revendedor[] = [];
+
   constructor(fabricante: string, tipo: string, ibu: number) {
     this.fabricante = fabricante;
     this.tipo = tipo;
     this.ibu = ibu;
   }
 }
+
+export class Revendedor {}
 
 const brejinha = new Cerveja('Eisenbahn', 'Pale Ale', 22);
 console.log(brejinha);
